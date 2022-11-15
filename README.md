@@ -1,54 +1,52 @@
-# python-exercise
-
 # Super user:
 
-email: admin@example.com
-user: admin
-password: admin1234@
+email: admin@example.com <br />
+user: admin <br />
+password: admin1234@ <br />
 
 # Create super user:
 
-python manage.py createsuperuser --email admin@example.com --username admin
+python manage.py createsuperuser --email admin@example.com --username admin <br />
 
 # Migration:
 
-python manage.py makemigrations
-python manage.py migrate
+python manage.py makemigrations <br />
+python manage.py migrate <br />
 
 # Clear data:
 
-python manage.py flush
+python manage.py flush <br />
 
 # Populate data:
 
-python manage.py loaddata restaurants.json
-python manage.py loaddata menus.json
-python manage.py loaddata menu-items.json
-python manage.py loaddata menu-menuItems-ref.json
-python manage.py loaddata menu-votes.json
+python manage.py loaddata restaurants.json <br />
+python manage.py loaddata menus.json <br />
+python manage.py loaddata menu-items.json <br />
+python manage.py loaddata menu-menuItems-ref.json <br />
+python manage.py loaddata menu-votes.json <br />
 
 # Documentation:
 
-http://127.0.0.1:8000/documentation/swagger.json
-http://127.0.0.1:8000/documentation/swagger.yaml
-http://127.0.0.1:8000/documentation/swagger/
-http://127.0.0.1:8000
+http://127.0.0.1:8000/documentation/swagger.json <br />
+http://127.0.0.1:8000/documentation/swagger.yaml <br />
+http://127.0.0.1:8000/documentation/swagger/ <br />
+http://127.0.0.1:8000 <br />
 
 # Notes:
 
-Supported authentication is TokenAuthentication
-TokenAuthentication are exposed
-For swagger authorization enter value "Token <token_value>"
+Supported authentication is TokenAuthentication <br />
+TokenAuthentication are exposed <br />
+For swagger authorization enter value "Token <token_value>" <br />
 
 # ENV:
 
-python3 -m venv env
-env\Scripts\activate
-pip install -r requirements.txt
+python3 -m venv env <br />
+env\Scripts\activate <br />
+pip install -r requirements.txt <br />
 
 # Run:
 
-python manage.py runserver
-pylint exercise.quickstart --generated-members=objects
-autopep8 --in-place --aggressive --aggressive <.py file>
-docker-compose up -> http://localhost:8000/
+python manage.py runserver <br />
+pylint exercise.quickstart --generated-members=objects <br />
+autopep8 --in-place --aggressive --aggressive <.py file> <br />
+docker-compose up -> http://localhost:8000/ <br />
