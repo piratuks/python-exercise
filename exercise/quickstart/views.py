@@ -137,19 +137,19 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             return self.serializer_classes[self.action]
         return super().get_serializer_class()
 
-    def vote_singular(self, request_data, data_id=None):
+    def vote_singular(self, request_data, pk=None):
         existing_vote_serializer = VotingSingleRequestSerializer(
             data=request_data)
         if not existing_vote_serializer.is_valid():
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
         menu = Menu.objects.filter(
-            restaurant_id=data_id,
+            restaurant_id=pk,
             name=existing_vote_serializer.data['menuName'],
             day=existing_vote_serializer.data['day'])
         if menu.__len__() > 0:
             obj_menu = Menu.objects.get(
-                restaurant_id=data_id,
+                restaurant_id=pk,
                 name=existing_vote_serializer.data['menuName'],
                 day=existing_vote_serializer.data['day'])
             vote_object = Vote.objects.filter(
@@ -176,7 +176,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
     @action(methods=['POST', ], detail=True,
             permission_classes=[permissions.IsAuthenticated, ])
-    def vote(self, request, data_id=None):
+    def vote(self, request, pk=None):
         if request.version == 'v2.0':
             existing_vote_serializer = VotingManyRequestSerializer(
                 data=request.data)
@@ -189,14 +189,14 @@ class RestaurantViewSet(viewsets.ModelViewSet):
                         'error': 'Only top three menu items are accepted for voting'})
 
             for item in existing_vote_serializer.data['data']:
-                response = self.vote_singular(item, data_id)
+                response = self.vote_singular(item, pk)
                 if request.data is not None:
                     break
             return response
         elif request.version == 'v1.0':
-            return self.vote_singular(request.data, data_id)
+            return self.vote_singular(request.data, pk)
         else:
-            return self.vote_singular(request.data, data_id)
+            return self.vote_singular(request.data, pk)
 
     @action(methods=['GET',
                      ],
@@ -205,9 +205,9 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuSerializer)
-    def menus_current_day(self, request, data_id=None):  # pylint: disable=unused-argument
+    def menus_current_day(self, request, pk=None):  # pylint: disable=unused-argument
         day = timezone.now().weekday() + 1
-        menu = Menu.objects.filter(restaurant_id=data_id, day=day)
+        menu = Menu.objects.filter(restaurant_id=pk, day=day)
         data = []
         if menu.__len__() > 0:
             data = MenuSerializer(menu, many=True).data
@@ -234,8 +234,8 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuSerializer)
-    def menus(self, request, data_id=None):  # pylint: disable=unused-argument
-        menu = Menu.objects.filter(restaurant_id=data_id)
+    def menus(self, request, pk=None):  # pylint: disable=unused-argument
+        menu = Menu.objects.filter(restaurant_id=pk)
         data = []
         if menu.__len__() > 0:
             data = MenuSerializer(menu, many=True).data
@@ -247,7 +247,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuRequestSerializer)
-    def menu(self, request, data_id=None):
+    def menu(self, request, pk=None):
         data = request.data
 
         if (data['day'] < 1 or data['day'] > 7):
@@ -256,16 +256,16 @@ class RestaurantViewSet(viewsets.ModelViewSet):
                     'error': 'Days are from 1 to 7 (from Monday to Sunday)'})
 
         existing_menu = Menu.objects.filter(
-            day=data['day'], restaurant_id=data_id)
+            day=data['day'], restaurant_id=pk)
         if existing_menu.__len__() > 0:
-            obj_menu = Menu.objects.get(day=data['day'], restaurant_id=data_id)
+            obj_menu = Menu.objects.get(day=data['day'], restaurant_id=pk)
             obj_menu.name = data['menuName']
             obj_menu.save()
         else:
             obj_menu = Menu.objects.create(
                 name=data['menuName'],
                 day=data['day'],
-                restaurant_id=data_id
+                restaurant_id=pk
             )
 
         for item in data['menuItems']:
