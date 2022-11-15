@@ -136,7 +136,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             return self.serializer_classes[self.action]
         return super().get_serializer_class()
 
-    def vote_singular(self, request_data, pk=None):
+    def vote_singular(self, request_data, pk=None):  # pylint: disable=invalid-name
         existing_vote_serializer = VotingSingleRequestSerializer(
             data=request_data)
         if not existing_vote_serializer.is_valid():
@@ -174,7 +174,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
     @action(methods=['POST', ], detail=True,
             permission_classes=[permissions.IsAuthenticated, ])
-    def vote(self, request, pk=None):
+    def vote(self, request, pk=None):  # pylint: disable=invalid-name
         if request.version == 'v2.0':
             existing_vote_serializer = VotingManyRequestSerializer(
                 data=request.data)
@@ -203,7 +203,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuSerializer)
-    def menus_current_day(self, request, pk=None):  # pylint: disable=unused-argument
+    def menus_current_day(self, request, pk=None):  # pylint: disable=unused-argument disable=invalid-name
         day = timezone.now().weekday() + 1
         menu = Menu.objects.filter(restaurant_id=pk, day=day)
         data = []
@@ -232,7 +232,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuSerializer)
-    def menus(self, request, pk=None):  # pylint: disable=unused-argument
+    def menus(self, request, pk=None):  # pylint: disable=unused-argument disable=invalid-name
         menu = Menu.objects.filter(restaurant_id=pk)
         data = []
         if menu.__len__() > 0:
@@ -245,7 +245,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=MenuRequestSerializer)
-    def menu(self, request, pk=None):
+    def menu(self, request, pk=None):  # pylint: disable=invalid-name
         data = request.data
 
         if (data['day'] < 1 or data['day'] > 7):

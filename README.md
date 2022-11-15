@@ -43,6 +43,7 @@ For swagger authorization enter value "Token <token_value>" <br />
 python3 -m venv env <br />
 env\Scripts\activate <br />
 pip install -r requirements.txt <br />
+pip freeze <br />
 
 # Run:
 
