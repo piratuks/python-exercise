@@ -97,8 +97,8 @@ class EmployeeViewSet(viewsets.ModelViewSet):
         authentication.SessionAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
-    def retrieve(self, request, data_id=None):  # pylint: disable=arguments-differ
-        item = get_object_or_404(self.queryset, pk=data_id)
+    def retrieve(self, request, pk=None):  # pylint: disable=arguments-differ
+        item = get_object_or_404(self.queryset, pk=pk)
         serializer = EmployeeSerializer(item)
         return Response(serializer.data)
 
@@ -290,7 +290,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
         return Response(status=status.HTTP_201_CREATED)
 
-    def retrieve(self, request, data_id=None):  # pylint: disable=arguments-differ
-        item = get_object_or_404(self.queryset, pk=data_id)
+    def retrieve(self, request, pk=None):  # pylint: disable=arguments-differ
+        item = get_object_or_404(self.queryset, pk=pk)
         serializer = RestaurantSerializer(item)
         return Response(serializer.data)
