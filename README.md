@@ -2,9 +2,9 @@
 
 # Super user:
 
-email: admin@example.com
-user: admin
-password: admin1234@
+email: admin@example.com <br />
+user: admin <br />
+password: admin1234@ <br />
 
 # Create super user:
 
