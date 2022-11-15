@@ -110,7 +110,6 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
     serializer_classes = {
-        'menu': MenuSerializer,
         'vote': {
             'v1.0': VotingSingleRequestSerializer,
             'v2.0': VotingManyRequestSerializer,
@@ -199,7 +198,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET',
                      ],
-            url_path='current',
+            url_path='menus/current',
             detail=True,
             permission_classes=[permissions.IsAuthenticated,
                                 ],
@@ -214,12 +213,12 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET',
                      ],
-            url_path='current',
+            url_path='votes/current',
             detail=False,
             permission_classes=[permissions.IsAuthenticated,
                                 ],
             serializer_class=VoteSerializer)
-    def votes(self, request):  # pylint: disable=unused-argument
+    def current_day_votes(self, request):  # pylint: disable=unused-argument
         day = timezone.now().weekday() + 1
         vote_object = Vote.objects.filter(day=day)
         data = []

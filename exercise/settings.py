@@ -74,9 +74,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'exercise.wsgi.application'
 
 REST_FRAMEWORK = {
-    'DEFAULT_VERSIONING_CLASS' : 'rest_framework.versioning.AcceptHeaderVersioning',
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.AcceptHeaderVersioning',
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication', 
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'VERSION_PARAM': 'version',
     'DEFAULT_VERSION': 'v2.0',
