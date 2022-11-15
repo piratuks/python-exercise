@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "python.linting.pylintArgs": ["--load-plugins=pylint_django"]
+}

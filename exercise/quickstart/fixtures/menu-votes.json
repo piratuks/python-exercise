@@ -1,0 +1,13 @@
+[
+  {
+    "model": "quickstart.Vote",
+    "pk": 1,
+    "fields": {
+      "count": 10,
+      "day": 1,
+      "menu_id": 1,
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  }
+]

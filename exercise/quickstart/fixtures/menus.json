@@ -1,0 +1,35 @@
+[
+  {
+    "model": "quickstart.Menu",
+    "pk": 1,
+    "fields": {
+      "name": "Monday menu",
+      "day": 1,
+      "restaurant_id": 1,
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.Menu",
+    "pk": 2,
+    "fields": {
+      "name": "Tuesday menu",
+      "day": 2,
+      "restaurant_id": 1,
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.Menu",
+    "pk": 3,
+    "fields": {
+      "name": "Wednesday menu",
+      "day": 3,
+      "restaurant_id": 1,
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  }
+]

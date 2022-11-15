@@ -1,0 +1,11 @@
+[MASTER]
+ignore=migrations
+disable=
+    C0114,
+    C0115,
+    C0116,
+    C2801,
+    C0201,
+    R1705,
+    R0901,
+    E1101

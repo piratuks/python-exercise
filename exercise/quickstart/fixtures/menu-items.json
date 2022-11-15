@@ -1,0 +1,112 @@
+[
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 1,
+    "fields": {
+      "name": "Chicken",
+      "price": 10,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 2,
+    "fields": {
+      "name": "Salad",
+      "price": 20,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 3,
+    "fields": {
+      "name": "Bacon",
+      "price": 25,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 4,
+    "fields": {
+      "name": "Salmon",
+      "price": 50,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 5,
+    "fields": {
+      "name": "Drinks",
+      "price": 50,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 6,
+    "fields": {
+      "name": "Pizza",
+      "price": 10,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 7,
+    "fields": {
+      "name": "Kebab",
+      "price": 10,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 8,
+    "fields": {
+      "name": "Sushi",
+      "price": 10,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 9,
+    "fields": {
+      "name": "Soup",
+      "price": 5,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.MenuItem",
+    "pk": 10,
+    "fields": {
+      "name": "Icecream",
+      "price": 3,
+      "currency": "EUR",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "model": "quickstart.restaurant",
+    "pk": 1,
+    "fields": {
+      "restaurantName": "Grill London",
+      "address": "Klaipėda · In Akropolis",
+      "city": "Klaipėda",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.restaurant",
+    "pk": 2,
+    "fields": {
+      "restaurantName": "Čili Pizza",
+      "address": "Klaipėda · In Akropolis",
+      "city": "Klaipėda",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.restaurant",
+    "pk": 3,
+    "fields": {
+      "restaurantName": "Charlie Pizza",
+      "address": "Klaipėda · In Akropolis",
+      "city": "Klaipėda",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.restaurant",
+    "pk": 4,
+    "fields": {
+      "restaurantName": "Chinese Bamboo",
+      "address": "Taikos pr. 66A, 93226 Klaipėda",
+      "city": "Klaipėda",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  },
+  {
+    "model": "quickstart.restaurant",
+    "pk": 5,
+    "fields": {
+      "restaurantName": "Kavinė Klaipėdos Senamiestis",
+      "address": "Kepėjų g. 13, 91248 Klaipėda",
+      "city": "Klaipėda",
+      "created": "2022-11-13T08:20:11.215Z", 
+      "updated": "2022-11-13T08:20:11.215Z"
+    }
+  }
+]
