@@ -31,10 +31,6 @@ Supported authentication is TokenAuthentication
 TokenAuthentication are exposed
 For swagger authorization enter value "Token <token_value>"
 
-ENV:
-python3 -m venv env
-env\Scripts\activate
-
 Run:
 python manage.py runserver
 pylint exercise.quickstart --generated-members=objects
