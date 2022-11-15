@@ -1,5 +1,3 @@
-# python-exercise
-
 # Super user:
 
 email: admin@example.com <br />
@@ -8,7 +6,7 @@ password: admin1234@ <br />
 
 # Create super user:
 
-python manage.py createsuperuser --email admin@example.com --username admin
+python manage.py createsuperuser --email admin@example.com --username admin <br />
 
 # Migration:
 
@@ -17,7 +15,7 @@ python manage.py migrate <br />
 
 # Clear data:
 
-python manage.py flush 
+python manage.py flush <br />
 
 # Populate data:
 
@@ -36,19 +34,19 @@ http://127.0.0.1:8000 <br />
 
 # Notes:
 
-Supported authentication is TokenAuthentication
-TokenAuthentication are exposed
-For swagger authorization enter value "Token <token_value>"
+Supported authentication is TokenAuthentication <br />
+TokenAuthentication are exposed <br />
+For swagger authorization enter value "Token <token_value>" <br />
 
 # ENV:
 
-python3 -m venv env
-env\Scripts\activate
-pip install -r requirements.txt
+python3 -m venv env <br />
+env\Scripts\activate <br />
+pip install -r requirements.txt <br />
 
 # Run:
 
-python manage.py runserver
-pylint exercise.quickstart --generated-members=objects
-autopep8 --in-place --aggressive --aggressive <.py file>
-docker-compose up -> http://localhost:8000/
+python manage.py runserver <br />
+pylint exercise.quickstart --generated-members=objects <br />
+autopep8 --in-place --aggressive --aggressive <.py file> <br />
+docker-compose up -> http://localhost:8000/ <br />
