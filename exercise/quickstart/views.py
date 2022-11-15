@@ -171,8 +171,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
                     'error': 'Menu with provided name and day have not been found'})
 
         return Response(
-            status=status.HTTP_200_OK, data={
-                'error': 'Only top three menu items are accepted for voting'})
+            status=status.HTTP_200_OK)
 
     @action(methods=['POST', ], detail=True,
             permission_classes=[permissions.IsAuthenticated, ])
